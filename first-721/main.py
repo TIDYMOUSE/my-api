@@ -11,7 +11,7 @@ client_id = os.getenv("CLIENT_ID")
 
 @app.get("/")
 def read_root():
-    return {"Hello": "World"}
+    return {"Many Men": "Wish Death Upon Me"}
 
 
 
@@ -58,7 +58,7 @@ def getTokenMetaDataWithoutCollections(
     except requests.RequestException as e:
         raise HTTPException(status_code=500, detail=f"Error calling Unsplash API: {str(e)}")
     
-@app.get("nft-metadata/{collections}")
+@app.get("/nft-metadata/{collections}")
 def getTokenMetaDataWithCollections(
     name: str,
     description: str,
